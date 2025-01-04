@@ -37,7 +37,8 @@ export default function SingleVideoSection() {
   };
 
   return (
-    <div className="min-h-screen py-10 px-5">
+    // <div className="min-h-screen py-10 px-5">
+    <div className="max-w-lg mx-auto p-3 w-full">
       <div className="max-w-6xl bg-indigo-600 mx-auto p-8 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg">
           Create Your Video
@@ -149,6 +150,20 @@ export default function SingleVideoSection() {
             >
               Save Video
             </button>
+            <div className="space-y-4">
+              <button
+                type="button"
+                className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium"
+              >
+                Preview Video
+              </button>
+              <button
+                type="button"
+                className="w-full bg-gray-800 text-white py-2 px-4 rounded-lg font-medium"
+              >
+                Edit Video/Upload Custom Photos
+              </button>
+            </div>
           </div>
         </form>
       </div>

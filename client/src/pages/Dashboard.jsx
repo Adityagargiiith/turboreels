@@ -9,6 +9,7 @@ import DashboardComp from '../components/DashboardComp';
 import SingleVideoSection from '../components/SingleVideoSection';
 import AffiliatePage from '../components/Affiliate_Page';
 import AutoUpload from '../components/AutoUploadSection';
+import ReelPage from '../components/View_all_reels';
 
 export default function Dashboard() {
   const location = useLocation();
@@ -50,6 +51,7 @@ export default function Dashboard() {
       
       {tab==="affiliate" && <AffiliatePage/>}
       {tab==="autoUpload" && <AutoUpload/>}
+      {tab==="reels" &&  <ReelPage/>}
 
 
 

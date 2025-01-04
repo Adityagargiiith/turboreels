@@ -9,8 +9,14 @@ import cookieParser from "cookie-parser";
 import path from "path";
 import videoroutes from "./routes/video.route.js";
 import cors from "cors";
+// import reelModel
+//  from "./models/reel.model.js";
 // import { getSubscriptionStatus } from "./controllers/subscription.controller.js";
-import subscriptionRoutes from './routes/subscription.route.js';
+// import subscriptionRoutes from './routes/subscription.route.js';
+// import referral from './routes/affiliate.route.js';
+import affiliateRoutes from './routes/affiliate.route.js';
+// import 
+import reelRoutes from "./routes/reel.route.js";
 
 
 
@@ -29,7 +35,12 @@ const __dirname = path.resolve();
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+
+app.use(cors({
+  origin: 'http://localhost:5173', // or whatever your frontend URL is
+  credentials: true // This is important
+}));
 app.use(express.json());
 app.use(cookieParser());
 // app
@@ -43,7 +54,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/post", postRoutes);
 app.use("/api/comment", commentRoutes);
 app.use("/api/video", videoroutes);
-app.use('/api/user', subscriptionRoutes);
+app.use("/api/reel", reelRoutes);
+// app.use('/api/user', subscriptionRoutes);
+// app.use('/api/referral', referral);
+app.use('/api/affiliate', affiliateRoutes)
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 

@@ -1,22 +1,4 @@
 import mongoose from "mongoose";
-const subscriptionHistorySchema = new mongoose.Schema({
-  orderId: {
-    type: String,
-    required: true
-  },
-  planName: {
-    type: String,
-    required: true
-  },
-  credits: {
-    type: Number,
-    required: true
-  },
-  purchaseDate: {
-    type: Date,
-    default: Date.now
-  }
-});
 
 const userSchema = new mongoose.Schema(
   {
@@ -54,6 +36,29 @@ const userSchema = new mongoose.Schema(
     activePlan: {
       type: String,
       default: "Free",
+    },
+    affiliate: {
+      type: String,
+      default: "",
+    },
+    referralLink: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+    
+    referralCode: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+    referralLogins: {
+      type: Number,
+      default: 0,
+    },
+    linkVisits: {
+      type: Number,
+      default: 0,
     },
   },
   { timestamps: true }

@@ -93,7 +93,7 @@ export default function DashUsers() {
               <Table.HeadCell>Username</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>Active Plan</Table.HeadCell>
-              <Table.HeadCell>Edit</Table.HeadCell>
+              {/* <Table.HeadCell>Edit</Table.HeadCell> */}
               {/* <Table.HeadCell>Delete</Table.HeadCell> */}
             </Table.Head>
             {users.map((user) => (
@@ -117,17 +117,7 @@ export default function DashUsers() {
                       {user.activePlan}
                     </span>
                   </Table.Cell>
-                  <Table.Cell>
-                    <button
-                      onClick={() => {
-                        setShowEditModal(true);
-                        setUserToEdit(user); // Store the selected user details
-                      }}
-                      className="font-medium text-blue-500 hover:underline cursor-pointer"
-                    >
-                      Edit
-                    </button>
-                  </Table.Cell>
+                  
 
                   {/* <Table.Cell>
                     <span
