@@ -355,6 +355,20 @@
             placeholder="password"
             onChange={handleChange}
           />
+          <TextInput
+          type="text"
+          id="youtube"
+          placeholder="YouTube Channel URL"
+          defaultValue={currentUser.youtube}
+          onChange={handleChange}
+        />
+        <TextInput
+          type="text"
+          id="instagram"
+          placeholder="Instagram Profile URL"
+          defaultValue={currentUser.instagram}
+          onChange={handleChange}
+        />
 
           {/* Credits and Plan Display */}
           <div className="bg-indigo-600 p-4 rounded shadow-md mt-4">

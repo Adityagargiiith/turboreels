@@ -39,7 +39,7 @@ export default function FooterCom() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  PublishHub
+                  TurboReels
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>

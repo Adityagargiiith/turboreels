@@ -101,13 +101,7 @@ export default function SignIn() {
             <OAuth />
           </form>
 
-          {/*Already have an account login */}
-          <div className="flex gap-2 text-sm mt-4">
-            <span>Don't Have an account?</span>
-            <Link to="/sign-up" className="text-blue-500">
-              Sign Up
-            </Link>
-          </div>
+          
           {errorMessage && (
             <Alert className="mt-5" color="failure">
               {errorMessage}

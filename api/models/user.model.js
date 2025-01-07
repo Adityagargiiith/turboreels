@@ -37,29 +37,16 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "Free",
     },
-    affiliate: {
+    youtube: {
       type: String,
-      default: "",
+      default: ''
     },
-    referralLink: {
+    instagram: {
       type: String,
-      unique: true,
-      sparse: true,
-    },
+      default: ''
+    }
     
-    referralCode: {
-      type: String,
-      unique: true,
-      sparse: true,
-    },
-    referralLogins: {
-      type: Number,
-      default: 0,
-    },
-    linkVisits: {
-      type: Number,
-      default: 0,
-    },
+
   },
   { timestamps: true }
 );

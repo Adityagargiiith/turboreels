@@ -113,23 +113,7 @@ export default function Header() {
         <AiOutlineSearch />
       </Button>
       <div className="flex gap-2 md:order-2">
-        <Button
-          className="w-12 h-10"
-          color="gray"
-          pill
-          onClick={toggleGoogleTranslate}
-        >
-          <BiGlobe className="w-5 h-5" />
-        </Button>
-
-        <Button
-          className="w-12 h-10 hidden sm:inline"
-          color="gray"
-          pill
-          onClick={() => dispatch(toggleTheme())}
-        >
-          {theme === 'dark' ? <FaSun /> : <FaMoon />}
-        </Button>
+        
 
         {currentUser ? (
           <Dropdown
@@ -167,13 +151,14 @@ export default function Header() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link active={path === '/'} as={'div'}>
-          <Link to="/">Home</Link>
-        </Navbar.Link>
-        <Navbar.Link active={path === '/about'} as={'div'}>
-          <Link to="/about">About</Link>
-        </Navbar.Link>
-      </Navbar.Collapse>
+  <Navbar.Link active={path === (currentUser ? '/' : '/about')} as={'div'}>
+    {currentUser ? (
+      <Link to="/">Home</Link>
+    ) : (
+      <Link to="/about">Home</Link>
+    )}
+  </Navbar.Link>
+</Navbar.Collapse>
     </Navbar>
   );
 }

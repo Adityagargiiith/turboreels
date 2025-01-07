@@ -10,6 +10,12 @@ import SingleVideoSection from '../components/SingleVideoSection';
 import AffiliatePage from '../components/Affiliate_Page';
 import AutoUpload from '../components/AutoUploadSection';
 import ReelPage from '../components/View_all_reels';
+import LibraryPage  from '../components/Library_Page';
+import Guide2 from '../components/guide_2';
+// import Guide from './Guide';
+// import Guide
+//  from './Guide';
+import Guide from '../components/Guide';
 
 export default function Dashboard() {
   const location = useLocation();
@@ -52,6 +58,9 @@ export default function Dashboard() {
       {tab==="affiliate" && <AffiliatePage/>}
       {tab==="autoUpload" && <AutoUpload/>}
       {tab==="reels" &&  <ReelPage/>}
+      {tab==="guide" && <Guide/>}
+      {tab==="library" && <LibraryPage/>}
+      {tab==="guide2" && <Guide2/>}
 
 
 
