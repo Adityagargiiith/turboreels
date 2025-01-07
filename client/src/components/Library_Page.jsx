@@ -21,7 +21,7 @@ const LibraryPage = () => {
   useEffect(() => {
     const fetchLatestVideo = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/video");
+        const response = await axios.get("https://turboreels.onrender.com/api/video");
         const videos = response.data.videos;
         const latestVideo = videos.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
