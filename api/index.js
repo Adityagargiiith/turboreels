@@ -29,7 +29,7 @@ const app = express();
 
 // Configure allowed origins for CORS
 const allowedOrigins = [
-  // 'http://localhost:5173', // Local development
+  'http://localhost:5173', // Local development
   'https://turboreels.onrender.com', // Production
 ];
 

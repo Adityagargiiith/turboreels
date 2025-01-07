@@ -62,7 +62,7 @@ export default function SingleVideoSection() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/video",
+        "https://turboreels.onrender.com/api/video",
         dataToSend
       );
       alert("Video data saved successfully!");
