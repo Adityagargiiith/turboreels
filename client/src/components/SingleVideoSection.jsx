@@ -69,7 +69,7 @@ export default function SingleVideoSection() {
       console.log(response.data);
 
       // Navigate
-      navigate("/library");
+      // navigate("/library");
       // Navigate("/library");
     } catch (error) {
       console.error(
